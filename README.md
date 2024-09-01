@@ -67,18 +67,18 @@ python manage.py runserver
 
 ### **8. Docker Setup**
 
-To use Docker, follow these steps:
+To build and run the Docker container, follow these steps:
 
-1. **Build Docker Images**
+1. **Build Docker Image**
 
    ```sh
-   docker-compose build
+   docker build -t django-sqlite-app .
    ```
 
-2. **Run Docker Containers**
+2. **Run Docker Container**
 
    ```sh
-   docker-compose up
+   docker run -p 8000:8000 django-sqlite-app
    ```
 
 ### **API Endpoints**
@@ -101,9 +101,22 @@ Replace `{BASE_URL}` with `http://127.0.0.1:8000` in the following endpoints:
   - **List Friends**: `{BASE_URL}/api/v1/friendships/friends/`
   - **List Pending Requests**: `{BASE_URL}/api/v1/friendships/pending_requests/`
 
+### **Postman Collection**
+
+A Postman collection is provided to help you quickly test the API endpoints. You can import the `social_network_rest_api.postman_collection.json` file into Postman to get started.
+
+- **[Download Postman Collection](social_network_rest_api.postman_collection.json)**
+
+To use the collection:
+
+1. Open Postman.
+2. Click on the "Import" button.
+3. Select the downloaded `social_network_rest_api.postman_collection.json` file.
+4. The collection will be added to your Postman workspace, and you can start testing the API endpoints.
+
 ### **Testing**
 
-Use Postman or a similar tool to test the API endpoints. 
+Use the Postman collection or any other API testing tool to validate the functionality of the endpoints.
 
 ### **Contributing**
 
